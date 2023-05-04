@@ -26,14 +26,19 @@ $(document).ready(function () {
     } else {
       console.table(formData);
       //   console.log(formData[0]);
-      M.toast({
-        html:
-          "Hi&nbsp;<strong> " +
-          formData[0].value +
-          " </strong>&nbsp;Your data added!",
-        classes: "green darken-1",
-      });
       $("#response").html($("#serializeForm").serialize());
+      $.ajax({
+        url: "save-form.php",
+        type: "POST",
+        data: $("#serializeForm").serialize(),
+        success: function (data) {
+          M.toast({
+            html: data,
+            classes: "green darken-1",
+          });
+        },
+      });
+
       $("#serializeForm").trigger("reset");
       return true; // allow form submission if all fields are filled!
     }

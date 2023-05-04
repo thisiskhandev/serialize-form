@@ -28,7 +28,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="sass.html">Sass</a></li>
               <li><a href="badges.html">Components</a></li>
-              <li><a href="collapsible.html">JavaScript</a></li>
+              <li><a id="viewData" href="javascript:void(0)">View</a></li>
             </ul>
           </div>
         </div>
@@ -67,7 +67,7 @@
                       class="with-gap"
                       name="gender"
                       type="radio"
-                      value="Male"
+                      value="0"
                       checked
                     />
                     <span>Male</span>
@@ -75,7 +75,7 @@
                 </p>
                 <p>
                   <label>
-                    <input name="gender" type="radio" value="female" />
+                    <input name="gender" type="radio" value="1" />
                     <span>Female</span>
                   </label>
                 </p>
@@ -96,12 +96,12 @@
               <div class="input-field col s12">
                 <i class="material-icons prefix">mode_edit</i>
                 <textarea
-                  id="msg"
+                  id="message"
                   type="text"
                   class="materialize-textarea"
-                  name="msg"
+                  name="message"
                 ></textarea>
-                <label for="msg">Message...</label>
+                <label for="message">Message...</label>
               </div>
             </div>
             <button
