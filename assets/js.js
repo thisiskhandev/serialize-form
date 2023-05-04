@@ -40,7 +40,19 @@ $(document).ready(function () {
       });
 
       $("#serializeForm").trigger("reset");
+      $("#response").fadeOut(7000);
+      $("#response").remove(10000);
       return true; // allow form submission if all fields are filled!
     }
+  });
+
+  $(document).on("click", "#viewData", function () {
+    $.ajax({
+      url: "load-data.php",
+      method: "POST",
+      success: function (data) {
+        
+      },
+    });
   });
 });
